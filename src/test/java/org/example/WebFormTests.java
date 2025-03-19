@@ -6,6 +6,7 @@ import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 import java.io.IOException;
@@ -118,7 +119,10 @@ class WebFormTests {
   }
 
   @Test
-  void selectTest() {}
+  void selectTest() {
+    WebElement dropdownSelectMenu = driver.findElement(By.name("my-select"));
+    Select select = new Select(dropdownSelectMenu);
+  }
 
   @Test
   void fileUploadTest() throws InterruptedException {
