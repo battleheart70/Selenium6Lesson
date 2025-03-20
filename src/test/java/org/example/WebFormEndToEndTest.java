@@ -132,7 +132,6 @@ public class WebFormEndToEndTest {
         submitButton.click();
     }
 
-    // 🔹 Методы для проверки результата
     private String getPageTitle() {
         return driver.findElement(By.cssSelector("h1[class ='display-6']")).getText();
     }
